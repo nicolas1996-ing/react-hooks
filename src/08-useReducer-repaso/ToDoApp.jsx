@@ -1,24 +1,24 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { UseToDoCustomHook } from "./customHooks/UseToDoCustomHook";
 import { ToDoAddForm } from "./ToDoAddForm";
 import { ToDoList } from "./ToDoList";
 
-
-
 export const ToDoApp = () => {
-
-  // manejo del estado de la app 
+  // manejo del estado de la app
   const {
     handleInputValue,
     handleDeleteToDo,
     handleChangeStateToDo,
-    toDoItems
-  } = UseToDoCustomHook()
-  
+    toDoItems,
+    getToDoItemsCount,
+    getPendingToDoItemsCount,
+  } = UseToDoCustomHook();
+
   return (
     <>
       <h1>
-        ToDoApp 10, <small>pending: 2</small>
+        ToDoApp {getToDoItemsCount()},{" "}
+        <small>pending: {getPendingToDoItemsCount()}</small>
       </h1>
       <hr />
 

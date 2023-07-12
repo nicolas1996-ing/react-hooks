@@ -15,10 +15,11 @@ import { CallbackHook } from "./06-memos/CallbackHook";
 import { Padre } from "./07-tarea-memo/Padre";
 import "./08-useReducer/intro-reducer";
 // import { ToDoApp } from "./08-useReducer/ToDoApp";
-import { MainApp } from "./09-useContext/MainApp";
+// import { MainApp } from "./09-useContext/MainApp";
 import { BrowserRouter } from "react-router-dom";
 import "./08-useReducer-repaso/intro-reducer/intro-reducer.js";
-import {ToDoApp} from "./08-useReducer-repaso/ToDoApp"
+import { ToDoApp } from "./08-useReducer-repaso/ToDoApp";
+import { MainApp } from "./09-useContext-repaso/MainApp";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -41,6 +42,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <MainApp />
     </BrowserRouter> */}
 
-    <ToDoApp></ToDoApp>
+    {/* useReducer */}
+    {/* <ToDoApp></ToDoApp> */}
+
+    {/* useContext */}
+    <BrowserRouter>
+      <MainApp />
+    </BrowserRouter>
   </React.StrictMode>
 );

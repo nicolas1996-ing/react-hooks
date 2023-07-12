@@ -11,7 +11,7 @@ const getToDosFromLs = () => {
 };
 
 export const UseToDoCustomHook = () => {
-  // estado de la app 
+  // estado de la app - instancia del custom hook
   const [toDoItems, dispatch] = useReducer(
     todoReducer,
     initialState,
@@ -49,10 +49,18 @@ export const UseToDoCustomHook = () => {
     localStorage.setItem("toDoItems", JSON.stringify(toDoItems));
   }, [toDoItems]);
 
+
+  // toDoItems counts 
+  const getToDoItemsCount = () => toDoItems.length;
+  const getPendingToDoItemsCount = () =>
+    toDoItems.filter((t) => !t.done).length;
+
   return {
     handleInputValue,
     handleDeleteToDo,
     handleChangeStateToDo,
-    toDoItems
+    toDoItems,
+    getToDoItemsCount,
+    getPendingToDoItemsCount
   };
 };
