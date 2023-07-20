@@ -1,8 +1,9 @@
 import React from "react";
 import { useCounter, useFetch } from "../hooks";
-import { LoadingQuote,Quote } from "./index";
+import { LoadingQuote, Quote } from "./index";
 
-const BASE_URL = import.meta.env.VITE_API_URL;
+// const BASE_URL = import.meta.env.VITE_API_URL;
+const BASE_URL = "https://fakestoreapi.com";
 
 export const MultipleCustomHooks = () => {
   const { counter, increment } = useCounter(1, 1);
