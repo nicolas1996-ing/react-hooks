@@ -13,8 +13,8 @@ export const HomePage = () => {
   return (
     <>
       HomePage
-      <pre>{JSON.stringify(user)}</pre>
-      <button onClick={() => updateUser(newUser)}>setUser</button>
+      <pre aria-label="pre-test-id">{JSON.stringify(user)}</pre>
+      <button aria-label="btn-test-id" onClick={() => updateUser(newUser)}>setUser</button>
     </>
   );
 };
